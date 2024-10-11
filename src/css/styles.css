@@ -1,11 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
+/* Color pallette */
 :root {
-    --header-title: #0e2538;
-    --subheader-title: #012644;
-    --text-color: #2f3036;
-    --unordered-list-bullet: rgba(203, 19, 23, 0.5);
-    --ordered-list-number: rgba(203, 19, 23, 0.5);
+    /* Generic colors */
+    --background-color: #f7f9fc;
+    --section-background-color: #ffffff;
+    --text-color: #333333;
+    --border-color: #e0e0e0;
+
+    /* Colors per html tag */
+    --h1-color: #333333;
+    --h2-color: #4a90e2;
+    --h3-color: #50e3c2;
+    --button-background-color: #4a90e2;
+    --button-hover-background-color: #3a7abd;
+    --button-hover-color: #ffffff;
+    --anchor-color: #50e3c2;
+    --anchor-hover-color: #ff6b6b;
+    --skill-tag-color: #333333;
+    --skill-tag-background-color: #ffd700;
+    --skill-tag-hover-background-color: #ff6b6b;
+    --skill-tag-hover-color: #ffffff;
 }
 
 * {
@@ -19,47 +34,120 @@ body {
     font-weight: 400;
     font-style: normal;
     display: grid;
-    grid-template-columns: 1fr;
-    background: rgba(255, 255, 255, 0.8) url("../img/background.png") no-repeat
-        center center fixed;
-    background-size: cover;
-    font-size: 1.3rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+        "summary summary"
+        "about about"
+        "education education"
+        "experience experience"
+        "projects skills"
+        "awards contactme";
+    font-size: 1.2rem;
     color: var(--text-color);
+    background-color: var(--background-color);
 }
 
-section {
-    display: flex;
-    align-items: center;
-    padding: 0 2rem 0 2rem;
-    min-height: 50vh;
+h1 {
+    color: var(--h1-color);
+}
+
+h2 {
+    color: var(--h2-color);
+}
+
+h3 {
+    color: var(--h3-color);
+}
+
+button {
+    background-color: var(--button-background-color);
+    color: var(--button-hover-color);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: var(--button-hover-background-color);
+}
+
+a {
+    color: var(--anchor-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--anchor-hover-color);
+}
+
+section > div {
+    background-color: var(--section-background-color);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 15px;
+    border-color: var(--border-color);
 }
 
 section {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 0 2rem 0 2rem;
+    padding: 0.5rem 1rem;
 }
 
-section > div > div > h2,
-section > div > div > h3 {
+/* Grid areas */
+#summary {
+    grid-area: summary;
+    height: 100vh;
+}
+
+#about {
+    grid-area: about;
+}
+
+#education {
+    grid-area: education;
+}
+
+#experience {
+    grid-area: experience;
+}
+
+#projects {
+    grid-area: projects;
+}
+
+#skills {
+    grid-area: skills;
+}
+
+#awards {
+    grid-area: awards;
+}
+
+#contactme {
+    grid-area: contactme;
+}
+
+/* Generic Styles */
+
+.container {
+    padding: 1rem 1.5rem;
+    width: 100%;
+}
+
+.container-header {
+    font-size: calc(1rem + 1vw);
+}
+
+/* Summary section */
+
+.summary-header {
     font-size: calc(1.7rem + 1.7vw);
-    color: var(--subheader-title);
 }
 
-section > div > div > h2 {
-    background-color: var(--header-title);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    text-shadow: rgba(112, 134, 233, 0.5) 3px 5px 1px;
-}
-
-/* Section header */
-.summar-header-main-text {
+.summary-header-main-text {
     font-size: calc(2.1rem + 2.1vw);
-
     font-family: "Oswald", sans-serif;
     font-optical-sizing: auto;
     font-weight: 600;
@@ -69,8 +157,50 @@ section > div > div > h2 {
         2px -2px 0 rgba(255, 255, 255, 0.9);
 }
 
-/* Summary section */
-
 .summary {
     min-height: 100vh;
+}
+
+.summary-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Skill section */
+
+.skill-tag {
+    background-color: var(--skill-tag-background-color);
+    color: var(--skill-tag-color);
+    padding: 5px 10px;
+    border-radius: 3px;
+    display: inline-block;
+    margin: 5px;
+}
+
+.skill-tag:hover {
+    background-color: var(--skill-tag-hover-background-color);
+    color: var(--skill-tag-hover-color);
+}
+
+/* Experience */
+
+#experience .container .container-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.card {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.card:nth-child(even) {
+    background-color: #f0f4f8;
 }
