@@ -1,0 +1,14 @@
+#about {
+    grid-area: about;
+}
+
+#about .container-body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    gap: 1rem;
+    justify-content: center;
+}
+
+#about .container-body > img {
+    border-radius: 50%;
+}

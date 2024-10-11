@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+        "summary summary"
+        "about about"
+        "education education"
+        "experience experience"
+        "projects skills"
+        "awards contactme";
+    font-size: 1.2rem;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    padding: min(1rem, 7%);
+    gap: 1rem;
+}
+
+h1 {
+    color: var(--h1-color);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+h2 {
+    color: var(--h2-color);
+}
+
+h3 {
+    color: var(--h3-color);
+}
+
+button {
+    background-color: var(--button-background-color);
+    color: var(--button-color);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: var(--button-hover-background-color);
+    color: var(--button-hover-color);
+}
+
+a {
+    color: var(--anchor-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--anchor-hover-color);
+}
+
+section > div {
+    background-color: var(--section-background-color);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 15px;
+    border-color: var(--border-color);
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}

@@ -1,0 +1,18 @@
+/* Experience section */
+
+#experience .container .container-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.card {
+    background-color: var(--card-background-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+}
