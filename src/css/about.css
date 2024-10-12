@@ -9,13 +9,13 @@
     justify-content: center;
 }
 
-.container-body > .profile-photo-container {
+.container-body .profile-photo-container {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
 }
 
-.container-body > .profile-photo-container > img {
+.container-body .profile-photo-container > img {
     border-radius: 50%;
     max-width: 70%;
 }
