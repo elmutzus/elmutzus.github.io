@@ -9,16 +9,19 @@
     justify-content: center;
 
     & .about-item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-        text-align: center;
+        & .profile-photo-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            justify-content: space-evenly;
+            height: 100%;
 
-        & .profile-photo {
-            border-radius: 50%;
-            max-width: 75%;
-            max-height: 75%;
+            & .profile-photo {
+                border-radius: 50%;
+                max-width: 75%;
+                max-height: 75%;
+            }
         }
 
         & p {
