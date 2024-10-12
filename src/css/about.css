@@ -7,25 +7,26 @@
     grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
     gap: 2rem;
     justify-content: center;
+}
 
-    & .about-item {
-        & .profile-photo-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            justify-content: space-evenly;
-            height: 100%;
+.container-body > .profile-photo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
 
-            & .profile-photo {
-                border-radius: 50%;
-                max-width: 75%;
-                max-height: 75%;
-            }
-        }
+.container-body > .profile-photo-container > img {
+    border-radius: 50%;
+    max-width: 70%;
+}
 
-        & p {
-            text-align: left;
-        }
-    }
+.container-body > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.container-body > div > p {
+    text-align: left;
 }
