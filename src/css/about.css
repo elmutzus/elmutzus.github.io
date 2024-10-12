@@ -5,10 +5,24 @@
 #about .container-body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
-    gap: 1rem;
+    gap: 2rem;
     justify-content: center;
 }
 
-#about .container-body > img {
+#about .container-body > div > div > img {
     border-radius: 50%;
+}
+
+#about .container-body > div > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#about .container-body > div {
+    text-align: center;
+}
+
+#about .container-body > div p {
+    text-align: left;
 }

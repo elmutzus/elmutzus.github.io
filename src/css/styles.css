@@ -49,6 +49,11 @@
     padding: 1rem 0rem;
 }
 
+.icon-standalone {
+    width: 100px;
+    height: 100px;
+}
+
 /* Summary section */
 
 #education {
