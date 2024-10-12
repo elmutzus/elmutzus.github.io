@@ -9,14 +9,16 @@
     justify-content: center;
 }
 
-#about .container-body > div > div > img {
+#about .container-body > div > img {
     border-radius: 50%;
+    max-width: 70%;
 }
 
-#about .container-body > div > div {
+#about .container-body > div {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 #about .container-body > div {
