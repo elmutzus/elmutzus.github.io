@@ -17,7 +17,8 @@
 
 .container-body .profile-photo-container > img {
     border-radius: 50%;
-    max-width: 70%;
+    max-width: 75%;
+    max-height: 75%;
 }
 
 .container-body > div {
