@@ -10,19 +10,19 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
 
-.summary-header {
-    font-size: calc(1.7rem + 1.7vw);
-}
+    & .summary-header {
+        font-size: calc(1.7rem + 1.7vw);
 
-.summary-header-main-text {
-    font-size: calc(2.1rem + 2.1vw);
-    font-family: "Oswald", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-    text-transform: uppercase;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4),
-        0px 0px 10px rgba(80, 227, 194, 0.7);
+        & .summary-header-main-text {
+            font-size: calc(2.1rem + 2.1vw);
+            font-family: "Oswald", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 600;
+            font-style: normal;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4),
+                0px 0px 10px rgba(80, 227, 194, 0.7);
+        }
+    }
 }
