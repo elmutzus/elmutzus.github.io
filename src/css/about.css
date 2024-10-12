@@ -2,32 +2,33 @@
     grid-area: about;
 }
 
-.container-body {
+#about .container-body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
     gap: 2rem;
     justify-content: center;
 }
 
-.container-body .profile-photo-container {
+#about .container-body > .profile-photo-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: space-evenly;
 }
 
-.container-body .profile-photo-container > img {
+#about .container-body > .profile-photo-container > img {
     border-radius: 50%;
     max-width: 75%;
     max-height: 75%;
 }
 
-.container-body > div {
+#about .container-body > .about-item {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
 }
 
-.container-body > div > p {
+#about .container-body > .about-item > p {
     text-align: left;
 }

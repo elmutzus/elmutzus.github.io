@@ -4,7 +4,7 @@
     grid-area: summary;
 }
 
-.summary-container {
+#summary .summary-container {
     width: 100%;
     height: 95vh;
     display: flex;
@@ -12,11 +12,11 @@
     justify-content: center;
 }
 
-.summary-container > .summary-header {
+#summary .summary-container > .summary-header {
     font-size: calc(1.7rem + 1.7vw);
 }
 
-.summary-container > .summary-header > .summary-header-main-text {
+#summary .summary-container > .summary-header > .summary-header-main-text {
     font-size: calc(2.1rem + 2.1vw);
     font-family: "Oswald", sans-serif;
     font-optical-sizing: auto;
