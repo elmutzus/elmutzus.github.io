@@ -24,6 +24,21 @@ body {
     gap: 1rem;
 }
 
+@media only screen and (max-width: 600px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "summary"
+            "about"
+            "education"
+            "experience"
+            "projects"
+            "skills"
+            "awards"
+            "contactme";
+    }
+}
+
 h1 {
     color: var(--h1-color);
     animation: fadeIn 0.5s ease-in-out;
