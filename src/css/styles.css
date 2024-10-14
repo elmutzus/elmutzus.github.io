@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
-/* Color pallette */
+/* 
+Color pallette 
+*/
 :root {
     --background-color: #1a1a1a;
     --section-background-color: #2b2b2b;
@@ -31,10 +33,48 @@
     --card-company-color: #ffaa00;
     --card-company-achievements-color: #e59400;
 
-    --award-detail-color: #e59400;
+    --subsection-subtitle-color: #e59400;
 }
 
-/* Generic Styles */
+/* 
+Grid Areas 
+*/
+
+#summary {
+    grid-area: summary;
+}
+
+#about {
+    grid-area: about;
+}
+
+#education {
+    grid-area: education;
+}
+
+#experience {
+    grid-area: experience;
+}
+
+#projects {
+    grid-area: projects;
+}
+
+#skills {
+    grid-area: skills;
+}
+
+#awards {
+    grid-area: awards;
+}
+
+#contactme {
+    grid-area: contactme;
+}
+
+/* 
+Generic Styles 
+*/
 
 .container {
     padding: 1rem 1.5rem;
@@ -53,18 +93,153 @@
     padding: 1rem 0rem;
 }
 
-.icon-standalone {
-    width: 100px;
-    height: 100px;
+.subsection-header {
+    text-transform: uppercase;
+    padding: 1rem 0;
 }
 
-/* Summary section */
-
-#education {
-    grid-area: education;
+.subsection-subheader {
+    text-transform: capitalize;
+    font-style: italic;
+    color: var(--subsection-subtitle-color);
+    padding-left: 1.5rem;
 }
 
-/* Skill section */
+/* 
+Summary Section 
+*/
+
+#summary .summary-container {
+    width: 100%;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#summary .summary-container > .summary-header {
+    font-size: calc(1.7rem + 1.7vw);
+}
+
+#summary .summary-container > .summary-header > .summary-header-main-text {
+    font-size: calc(2.1rem + 2.1vw);
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4),
+        0px 0px 10px rgba(80, 227, 194, 0.7);
+}
+
+/* 
+About Section 
+*/
+
+#about .container-body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    gap: 2rem;
+    justify-content: center;
+}
+
+#about .container-body > .profile-photo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#about .container-body > .profile-photo-container > img {
+    border-radius: 50%;
+    max-width: 75%;
+    max-height: 75%;
+}
+
+#about .container-body > .about-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#about .container-body > .about-item > p {
+    text-align: left;
+}
+
+/* 
+Experiencie Section
+*/
+
+#experience .container .container-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-shrink: 1;
+    flex-grow: 1;
+    gap: 1rem;
+}
+
+#experience .card {
+    background-color: var(--card-background-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    width: 50%;
+}
+
+@media only screen and (max-width: 768px) {
+    #experience .container .container-body {
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    #experience .card {
+        width: 100%;
+    }
+}
+
+#experience .card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+}
+
+/* 
+Card body items 
+*/
+#experience .card > .subsection-header {
+    padding: 1rem;
+}
+
+#experience .card > .experience-summary {
+    padding: 0 1rem 1rem 1rem;
+}
+
+#experience .card > .experience-achievements > ul {
+    padding: 0 1rem 1rem 4rem;
+    font-style: italic;
+}
+
+/* 
+Projects section 
+*/
+
+#projects .card {
+    background-color: var(--card-background-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    width: 100%;
+    padding: 1rem;
+}
+
+#projects .card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+}
+
+/* 
+Skills section 
+*/
 
 .skill-tag {
     background-color: var(--skill-tag-background-color);
