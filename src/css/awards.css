@@ -1,0 +1,9 @@
+#awards {
+    grid-area: awards;
+}
+
+#awards .award-detail {
+    text-transform: capitalize;
+    font-style: italic;
+    color: var(--award-detail-color);
+}

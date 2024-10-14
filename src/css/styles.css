@@ -28,6 +28,10 @@
     --card-text-color: #e5e5e5;
     --card-border-color: #3a3a3a;
     --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    --card-company-color: #ffaa00;
+    --card-company-achievements-color: #e59400;
+
+    --award-detail-color: #e59400;
 }
 
 /* Generic Styles */
@@ -58,18 +62,6 @@
 
 #education {
     grid-area: education;
-}
-
-#experience {
-    grid-area: experience;
-}
-
-#awards {
-    grid-area: awards;
-}
-
-#contactme {
-    grid-area: contactme;
 }
 
 /* Skill section */
