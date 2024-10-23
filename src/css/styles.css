@@ -238,3 +238,11 @@ Skills section
     color: var(--skill-tag-hover-color);
     animation: fadeIn 0.4s;
 }
+
+/*
+Contact me section
+*/
+
+.contact-me-title {
+    padding-top: 1rem;
+}
